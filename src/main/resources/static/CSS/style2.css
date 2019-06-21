@@ -1,0 +1,79 @@
+@font-face {
+   font-family: 'Arial';
+   src: url(Arial.eot);
+   src: local('Arial'), url('Arial') format('truetype');
+} 
+
+span.elenco{
+   font-family: Bahnschrift SemiCondensed;
+   font-size: 45px;;
+   color:red;
+   text-decoration: Underline
+   
+}
+
+@font-face {
+   font-family: 'Bahnschrift SemiCondensed';
+   src: url(Bahnschrift SemiCondensed.eot);
+   src: local('Bahnschrift SemiCondensed'), url('Bahnschrift SemiCondensed.ttf') format('truetype');
+} 
+
+span.fotografi{
+   font-family: Bahnschrift SemiCondensed;
+   font-size: 30px;;
+}
+
+ul#menu {
+list-style: none;
+margin:0;
+padding:0;
+text-align:center;
+}
+#menu li {display:inline;}
+#menu li a {
+
+display:inline-block;
+padding:20px;
+font-weight: bold;
+height: 40px;
+line-height: 50px;
+
+}
+
+span.accedi {margin-left: 730px;}
+
+@font-face {
+   font-family: 'Arial Rounded MT Bold';
+   src: url(Arial Rounded MT Bold.eot);
+   src: local('Arial Rounded MT Bold'), url('Arial Rounded MT Bold') format('truetype');
+} 
+
+span.titoloAlbum{
+   font-family: Cooper Black;
+   color: blue;
+   font-size: 30px;;
+   
+}
+
+span.spazioParole2
+{
+ 	word-spacing: 80px;  
+}
+
+ul#menu2 {
+list-style: none;
+margin:0;
+padding:0;
+text-align:center;
+}
+#menu2 li {display:inline;}
+#menu2 li a {
+
+display:inline-block;
+padding:50px;
+font-weight: bold;
+height: 10px;
+line-height: 50px;
+
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/style.css}"/>
+
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+	<div align="center">
+		<a th:href="@{/Home}"><img th:src="@{/Immagini/Immagine.png}" width="240" height="84" /></a>
+		
+	</div>
+	
+	
+	<div align="center">
+		<span class="caratteri">
+			<span class="spazioParole">
+				<a th:href="@{/Home}">HOME</a>       
+				<span class="noSpazio"><a th:href="@{/AreaFotografi}">AREA FOTOGRAFI</a></span>
+				<span class="noSpazio"><a th:href="@{/AreaFunzionari}">AREA FUNZIONARI</a></span>
+				<a th:href="@{/Contatti}">CONTATTI</a>
+		<br><br><br>
+		<span class="noSpazio">
+		<font size="5"><a th:href="@{/IniziaRichiesta}">Richiedi Fotografie</a></font></span>
+			</span>
+		
+		</span>
+	</div>
+
+<br><br>
+
+<div align="right">
+<table>
+	<tr>
+		<td width="950" height="100" align="left"><span class="titoloHome">Chi siamo</span></td>
+		<td rowspan="2" width="500" align="center"><br><br><br><br>
+		<img th:src="@{/Immagini/home.jpg}" width="300" height="200"></td>
+	</tr>
+	<tr>
+		<td width="950" height="100">
+			<span class="testoHome">
+					L'agenzia SILPH SPA gestisce album e fotografie per conto di fotografi e fa da 
+					mediatore per il loro utilizzo da parte di clienti <br>
+					(ad esempio aziende che vogliono usarle per campagne pubblicitarie).
+					<br>In dettaglio:
+					<ul>
+						<li> Il potenziale cliente visita il sito web SILPH ed esplora la loro gallery
+						 di fotografi, album e fotografie;</li>
+						 <li>Il potenziale cliente sceglie una o piu foto di interesse e compila una 
+						 richiesta di utilizzo;</li>
+						 <li>Un funzionario SILPH visualizza la richiesta e manda al cliente un contratto 
+						 di utilizzo;</li>
+					</ul>
+			</span>
+		</td>
+		
+	</tr>
+
+</table></div>
+
+</body>
+</html>

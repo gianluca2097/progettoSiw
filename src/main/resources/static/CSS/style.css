@@ -1,0 +1,93 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: grey;
+}
+
+span.spazioParole
+{
+ 	word-spacing: 100px;  
+}
+
+span.noSpazio
+{
+word-spacing: 0px;
+}
+
+@font-face {
+   font-family: 'Bahnschrift SemiCondensed';
+   src: url(Bahnschrift SemiCondensed.eot);
+   src: local('Bahnschrift SemiCondensed'), url('Bahnschrift SemiCondensed.ttf') format('truetype');
+} 
+
+span.caratteri{
+   font-family: Bahnschrift SemiCondensed;
+   
+}
+
+@font-face {
+   font-family: 'Lucida Handwriting';
+   src: url(Lucida Handwriting.eot);
+   src: local('Lucida Handwriting'), url('Lucida Handwriting') format('truetype');
+} 
+
+span.login{
+   font-family: Lucida Handwriting;
+   
+}
+
+@font-face {
+   font-family: 'Arial Rounded MT Bold';
+   src: url(Arial Rounded MT Bold.eot);
+   src: local('Arial Rounded MT Bold'), url('Arial Rounded MT Bold') format('truetype');
+} 
+
+span.titoloLogin{
+   font-family: Cooper Black;
+   color: red;
+   font-size: 30px;;
+   
+}
+
+@font-face {
+   font-family: 'Berlin Sans FB';
+   src: url(Berlin Sans FB.eot);
+   src: local('Berlin Sans FB'), url('Berlin Sans FB') format('truetype');
+} 
+
+span.testo{
+   font-family: Berlin Sans FB;
+   font-size: 20px;;
+   
+}
+
+@font-face {
+   font-family: 'Bahnschrift SemiCondensed';
+   src: url(Bahnschrift SemiCondensed.eot);
+   src: local('Bahnschrift SemiCondensed'), url('Bahnschrift SemiCondensed.ttf') format('truetype');
+} 
+
+span.titoloHome{
+   font-family: Bahnschrift SemiCondensed;
+   font-size: 50px;;
+   color:red;
+   
+}
+
+@font-face {
+   font-family: 'Bahnschrift SemiCondensed';
+   src: url(Bahnschrift SemiCondensed.eot);
+   src: local('Bahnschrift SemiCondensed'), url('Bahnschrift SemiCondensed.ttf') format('truetype');
+} 
+
+span.testoHome{
+   font-family: Bahnschrift SemiCondensed;
+   font-size: 25px;;
+   
+   
+}
+

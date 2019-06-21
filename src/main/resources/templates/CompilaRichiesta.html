@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/style.css}"/>
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+
+
+<br><br><br>
+
+	<div align="center">
+		foto selezionate:</font>
+	</div>
+	<div align="center">
+	
+		<ul>
+			<li th:each="fotografia:${listaFotografie}"><a
+				th:text="${fotografia.titolo + fotografia.id}">titolo</a></li>
+		</ul>
+	</div>
+	
+	<a th:href = "@{/confermaRichiesta}"><button
+				type="submit">Conferma Richiesta</button>
+	
+	<!-- 
+	<div align="center">
+	
+			<form th:action="@{/}" method="POST" th:object="${richiesta}">
+				<table>
+					<tr>
+						<td>Nome Utente:</td>
+						<td><input type="text" th:field="*{nomeUtente}" /></td>
+						<td th:if="${#fields.hasErrors('nomeUtente')}" th:errors="*{nomeUtente}"></td>
+					</tr>
+					<tr>
+						<td>Cognome Utente:</td>
+						<td><input type="text" th:field="*{cognomeUtente}" /></td>
+						<td th:if="${#fields.hasErrors('cognomeUtente')}" th:errors="*{cognomeUtente}"></td>
+					</tr>
+				</table>
+	</div><br>
+						<span class="accedi"><button type="submit">Conferma Richiesta</button></span>
+				
+			</form>  -->
+
+
+</body>
+</html>

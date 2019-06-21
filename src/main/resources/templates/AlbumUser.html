@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/style.css}"/>
+<link rel="stylesheet" th:href="@{/CSS/style2.css}"/>
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+	<div align="center">
+		<a th:href="@{/Home}"><img th:src="@{/Immagini/Immagine.png}" width="240" height="84" /></a>		
+	</div>
+		
+	<div align="center">
+		<span class="caratteri">
+			<span class="spazioParole">
+				<a th:href="@{/Home}">HOME</a>       
+				<span class="noSpazio"><a th:href="@{/AreaFotografi}">AREA FOTOGRAFI</a></span>
+				<span class="noSpazio"><a th:href="@{/AreaFunzionari}">AREA FUNZIONARI</a></span>
+				<a th:href="@{/Contatti}">CONTATTI</a>
+			</span>
+		</span>
+	</div><br>
+	
+	<div align="center"><h3>
+		<font color="blue">FOTOGRAFO:</font> &nbsp&nbsp<span th:text="${fotografo.nome}">GGG</span>
+    	 	<span th:text="${fotografo.cognome}">F</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    	 <font color="blue">ALBUM:</font> &nbsp&nbsp<span th:text="${album.titolo}">GGG</span>
+     </h3></div>
+
+
+		<br>
+		<div align="right">
+<table><tr>
+	<td width="400"><div>
+		<span class="elenco">Elenco Fotografie:</span>
+		<span class="fotografi"> 
+			<ul>
+			<li th:each="fotografia:${fotografie}"><a th:href="@{'/Fotografo' + '/' + 
+			${fotografo.id} + '/album' + '/' + ${album.id}
+			+'/fotografia'+'/'+${fotografia.id}}" th:text="${fotografia.titolo}">titolo</a></li>
+		</ul>
+		</span>
+	</div>
+	</td>
+	<td width="1000" height="100%" align="center">
+	
+	<img th:src="@{/Immagini/fotografiusers.jpg}" width="350" height="450"></td>
+	</tr>
+</table>
+</div>
+		
+</body>
+</html>

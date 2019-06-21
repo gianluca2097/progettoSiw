@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/style.css}"/>
+<link rel="stylesheet" th:href="@{/CSS/style2.css}"/>
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+
+	<div align="center">
+		<a th:href="@{/Home}"><img th:src="@{/Immagini/Immagine.png}" width="240" height="84" /></a>
+		
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<a href="/logout"><img src="/Immagini/logout.jpg" width="80" height="70"></a>
+	</div>
+	
+	<br>
+	
+	<div align="center">
+		<span class="caratteri">
+			
+			<font size="20"><span class="noSpazio"><a th:href="@{/AreaRiservata}">AREA RISERVATA</a></span></font>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<font color="blue" size="5">Welcome, <span th:utext="${username}"></span>!</font>
+		</span>
+	</div>
+	
+<br><br><br>
+
+	<div>
+		<div align=center><span class="elenco">Elenco Fotografi:</span></div>
+		<span class="fotografi"> 
+		
+		<ul id="menu">
+			<li th:each="fotografo : ${fotografi}"> 
+				<a th:href="@{'/FotografoRiservato' + '/' + ${fotografo.id}}"
+					th:text="${fotografo.nome + ' ' + fotografo.cognome}">paolo rossi</a>
+			</li>
+		</ul>
+		</span>
+		
+	</div>
+	
+	<br><br><br><br><br><br>
+	
+	<div align="center">
+		<span class="titoloLogin">Inserisci un nuovo fotografo</span><br><br>
+	
+			<form th:action="@{/AreaRiservata}" method="POST" th:object="${fotografo}">
+				<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" th:field="*{nome}" /></td>
+						<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+					</tr>
+					<tr>
+						<td>Cognome:</td>
+						<td><input type="text" th:field="*{cognome}" /></td>
+						<td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
+					</tr>
+				</table>
+	</div><br>
+						<span class="accedi"><button type="submit">Inserisci</button></span>
+				
+			</form>
+	
+
+</body>
+</html>
+<!--  -->

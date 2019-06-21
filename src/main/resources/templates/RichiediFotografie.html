@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+<h2>Di seguito vengono visualizzate le foto di tutti i fotografi</h2><br>
+
+<div align="center">
+
+		<ul>
+			<li th:each="fotografia:${listaFotografie}">
+			<a th:text="${fotografia.titolo}">titolo</a>
+			
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<a th:href="@{'/RichiediFotografie'+'/'+${richiesta.id}+'/putInRichiesta'+'/'+${fotografia.id}}">
+			<button type="submit">Seleziona</button></a>
+			</li>
+		</ul>
+
+	</div>
+
+	<div align="center">
+
+		<a th:href="@{'/riepilogo'+'/richiesta'+'/'+${richiesta.id}}"><button
+				type="submit">Vai al riepilogo</button></a>
+
+	</div>
+
+</body>
+</html>

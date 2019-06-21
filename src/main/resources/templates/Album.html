@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/style.css}"/>
+<link rel="stylesheet" th:href="@{/CSS/style2.css}"/>
+<meta charset="ISO-8859-1">
+<title>Silph spa</title>
+</head>
+<body>
+
+
+	<div align="center">
+		<a th:href="@{/Home}"><img th:src="@{/Immagini/Immagine.png}" width="240" height="84" /></a>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		
+		<a href="/logout"><img src="/Immagini/logout.jpg" width="80" height="70"></a>
+	</div>
+	
+	<div align="center">
+	<h1>	
+		<span class="caratteri">
+			<span class="spazioParole2">
+				<span class="noSpazio"><a th:href="@{/AreaRiservata}">AREA RISERVATA</a></span>    
+				<span class="noSpazio"><a th:href="@{'/FotografoRiservato' + '/' + ${fotografo.id} + '/album' + '/' + ${album.id} + '/addFotografia'}">INSERISCI FOTOGRAFIA</a></span>
+				<span class="noSpazio"><a th:href="@{'/FotografoRiservato' + '/' + ${fotografo.id}}">LISTA ALBUM</a></span>
+			</span>
+		</span>
+	</h1>
+	</div>
+	
+	<div align="center"><h3>
+		<font color="red">FOTOGRAFO:</font> &nbsp&nbsp <span th:text="${fotografo.nome}">GGG</span>
+    		<span th:text="${fotografo.cognome}">GGG</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    	<font color="red">ALBUM:</font> &nbsp&nbsp<span th:text="${album.titolo}">GGG</span>
+	</h3></div>
+	
+	<br><br>
+
+
+		<div>
+		<div align=center><span class="elenco">Elenco Fotografi:</span></div>
+		<span class="fotografi"> 
+		
+		<ul id="menu">
+						<li th:each="fotografia:${fotografie}"><a th:href="@{'/FotografoRiservato' + '/' + ${fotografo.id} + '/album' + '/' + ${album.id}
+							+'/fotografia'+'/'+${fotografia.id}}" th:text="${fotografia.titolo}">titolo</a></li>
+					</ul>
+		</span>
+		
+	</div>
+	
+</body>
+</html>
